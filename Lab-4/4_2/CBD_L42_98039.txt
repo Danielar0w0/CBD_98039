@@ -1,0 +1,68 @@
+// NMEC: 98039
+
+#1
+match (p:Person)-[:DIRECTED]->(m:Movie)<-[:ACTED_IN]-(p:Person) return p.name, m.title
+
+#2
+match (m:Movie)<-[:ACTED_IN]-(p:Person) where m.released > 2005 return p.name, m.title 
+
+#3
+match (m)-[relation]-(n)-[relation2]-(m) return m, n
+
+#4
+match (p1:Person)-[:REVIEWED]->(m:Movie)<-[:REVIEWED]-(p2:Person) return distinct p1.name, p2.name, m.title
+
+#5
+match (p1:Person)-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(p2:Person)-[:ACTED_IN]->(m2:Movie)<-[:ACTED_IN]-(p1:Person) return distinct p1.name, p2.name
+
+#6
+match (p:Person)-[:ACTED_IN]->(m:Movie) where m.title = "Apollo 13" return avg(m.released - p.born)
+
+#7
+match (p:Person)-[:ACTED_IN]->(m:Movie) return m.title, round(avg(m.released - p.born), 2) as avg_age order by avg_age desc limit 10
+
+#8
+match (p:Person)-[:ACTED_IN]->(m:Movie) return m, avg(m.released-p.born) as avg_age order by avg_age limit 1
+
+// WARNING!!!
+#9 
+match (p1:Person {name: "John Cusack"}), (p2:Person {name: "Demi Moore"}), p = shortestPath((p1)-[*]-(p2)) with p where length(p) > 1 return p
+
+// WARNING!!!
+#10
+match (p1:Person {name: "Keanu Reeves"}), (p2:Person {name: "Tom Cruise"}), p = shortestPath((p1)-[*]-(p2)) with p where length(p) > 1 return length(p)
+
+#11
+match (p1:Person where p1.name contains "Jim"), (p2:Person where p2.name contains "Kevin"), p = shortestPath((p1)-[*]-(p2)) with p, p1, p2 where length(p) > 1 return p1.name, p2.name, length(p)
+
+#12
+match p = (p1:Person)-[*]-(p2:Person) where p2.name= "Kevin Bacon" and length(p) > 1 return p order by length(p) desc limit 1
+
+#13 
+match (p1: Person), (p2:Person), p = shortestpath((p1)-[*]-(p2)) where p1<>p2 and p2.name= "Kevin Bacon" return length(p) order by length(p) desc limit 1
+
+#14
+match (p1: Person), (p2: Person), p = shortestpath((p1)-[*]-(p2)) where p1<>p2 return length(p) order by length(p) desc limit 1
+
+#15
+match (p1:Person), (p2:Person), p = shortestpath((p1)-[*]-(p2)) where p1<>p2 return length(p) as distance, count(p) as pairs
+
+#16
+match (p1: Person), (p2: Person), p = shortestpath((p1)-[:ACTED_IN*]-(p2)) where p1<>p2 return p1.name, avg(length(p)) as avg_distance order by avg_distance asc limit 10
+
+// Return the relationships whose names end with "D" and the number of times they are appear
+#17
+match (m)-[relationship]->() where type(relationship) ends with "D" return type(relationship), count(relationship)
+match (m)-[relationship]->() where type(relationship) =~ ".*D" return type(relationship), count(relationship)
+
+// Return all the people who produced or wrote a movie
+#18
+match (p1:Person)-[:WROTE]-(m:Movie) return p1.name as producer_or_writer union match(p1:Person)-[:PRODUCED]-(m:Movie) return p1.name as producer_or_writer
+
+// Return the number of actors of each movie that was reviewed by "Jessica Thompson"
+#19
+match (p1:Person)-[:ACTED_IN]->(m:Movie)<-[:REVIEWED]-(p2:Person {name: "Jessica Thompson"}) return m.title as movie, count(p1) as n_actors
+
+// Return all movies with numbers in their title
+#20 match (m:Movie) where m.title =~ ".*[1-9].*" return m.title
+

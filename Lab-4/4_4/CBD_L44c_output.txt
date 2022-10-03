@@ -1,0 +1,198 @@
+
+// Get list of products which stock is less than the quantity on order
+# 1
+
+Query 1:
+{productID=2, productName=Chang, inStock=17, onOrder=40}
+{productID=3, productName=Aniseed Syrup, inStock=13, onOrder=70}
+{productID=11, productName=Queso Cabrales, inStock=22, onOrder=30}
+{productID=21, productName=Sir Rodney's Scones, inStock=3, onOrder=40}
+{productID=31, productName=Gorgonzola Telino, inStock=0, onOrder=70}
+{productID=32, productName=Mascarpone Fabioli, inStock=9, onOrder=40}
+{productID=37, productName=Gravad lax, inStock=11, onOrder=50}
+{productID=45, productName=Rogede sild, inStock=5, onOrder=70}
+{productID=48, productName=Chocolade, inStock=15, onOrder=70}
+{productID=49, productName=Maxilaku, inStock=10, onOrder=60}
+{productID=64, productName=Wimmers gute Semmelknödel, inStock=22, onOrder=80}
+{productID=66, productName=Louisiana Hot Spiced Okra, inStock=4, onOrder=100}
+{productID=68, productName=Scottish Longbreads, inStock=6, onOrder=10}
+{productID=74, productName=Longlife Tofu, inStock=4, onOrder=20}
+
+
+// Get most expensive product
+# 2
+
+Query 2:
+{productID=38, productName=Côte de Blaye, unitPrice=263.5}
+
+
+// Get all products supplied by a specific supplier (supplierID = "6")
+# 3
+
+Query 3:
+{productID=15, productName=Genen Shouyu}
+{productID=14, productName=Tofu}
+{productID=13, productName=Konbu}
+
+
+// Get number of orders of each costumer
+# 4
+
+Query 4:
+{costumerID=ALFKI, nOrders=6}
+{costumerID=ANATR, nOrders=4}
+{costumerID=ANTON, nOrders=7}
+{costumerID=AROUT, nOrders=13}
+{costumerID=BERGS, nOrders=18}
+{costumerID=BLAUS, nOrders=7}
+{costumerID=BLONP, nOrders=11}
+{costumerID=BOLID, nOrders=3}
+{costumerID=BONAP, nOrders=17}
+{costumerID=BOTTM, nOrders=14}
+{costumerID=BSBEV, nOrders=10}
+{costumerID=CACTU, nOrders=6}
+{costumerID=CENTC, nOrders=1}
+{costumerID=CHOPS, nOrders=8}
+{costumerID=COMMI, nOrders=5}
+{costumerID=CONSH, nOrders=3}
+{costumerID=DRACD, nOrders=6}
+{costumerID=DUMON, nOrders=4}
+{costumerID=EASTC, nOrders=8}
+{costumerID=ERNSH, nOrders=30}
+{costumerID=FAMIA, nOrders=7}
+{costumerID=FOLIG, nOrders=5}
+{costumerID=FOLKO, nOrders=19}
+{costumerID=FRANK, nOrders=15}
+{costumerID=FRANR, nOrders=3}
+{costumerID=FRANS, nOrders=6}
+{costumerID=FURIB, nOrders=8}
+{costumerID=GALED, nOrders=5}
+{costumerID=GODOS, nOrders=10}
+{costumerID=GOURL, nOrders=9}
+{costumerID=GREAL, nOrders=11}
+{costumerID=GROSR, nOrders=2}
+{costumerID=HANAR, nOrders=14}
+{costumerID=HILAA, nOrders=18}
+{costumerID=HUNGC, nOrders=5}
+{costumerID=HUNGO, nOrders=19}
+{costumerID=ISLAT, nOrders=10}
+{costumerID=KOENE, nOrders=14}
+{costumerID=LACOR, nOrders=4}
+{costumerID=LAMAI, nOrders=14}
+{costumerID=LAUGB, nOrders=3}
+{costumerID=LAZYK, nOrders=2}
+{costumerID=LEHMS, nOrders=15}
+{costumerID=LETSS, nOrders=4}
+{costumerID=LILAS, nOrders=14}
+{costumerID=LINOD, nOrders=12}
+{costumerID=LONEP, nOrders=8}
+{costumerID=MAGAA, nOrders=10}
+{costumerID=MAISD, nOrders=7}
+{costumerID=MEREP, nOrders=13}
+{costumerID=MORGK, nOrders=5}
+{costumerID=NORTS, nOrders=3}
+{costumerID=OCEAN, nOrders=5}
+{costumerID=OLDWO, nOrders=10}
+{costumerID=OTTIK, nOrders=10}
+{costumerID=PERIC, nOrders=6}
+{costumerID=PICCO, nOrders=10}
+{costumerID=PRINI, nOrders=5}
+{costumerID=QUEDE, nOrders=9}
+{costumerID=QUEEN, nOrders=13}
+{costumerID=QUICK, nOrders=28}
+{costumerID=RANCH, nOrders=5}
+{costumerID=RATTC, nOrders=18}
+{costumerID=REGGC, nOrders=12}
+{costumerID=RICAR, nOrders=11}
+{costumerID=RICSU, nOrders=10}
+{costumerID=ROMEY, nOrders=5}
+{costumerID=SANTG, nOrders=6}
+{costumerID=SAVEA, nOrders=31}
+{costumerID=SEVES, nOrders=9}
+{costumerID=SIMOB, nOrders=7}
+{costumerID=SPECD, nOrders=4}
+{costumerID=SPLIR, nOrders=9}
+{costumerID=SUPRD, nOrders=12}
+{costumerID=THEBI, nOrders=4}
+{costumerID=THECR, nOrders=3}
+{costumerID=TOMSP, nOrders=6}
+{costumerID=TORTU, nOrders=10}
+{costumerID=TRADH, nOrders=6}
+{costumerID=TRAIH, nOrders=3}
+{costumerID=VAFFE, nOrders=11}
+{costumerID=VICTE, nOrders=10}
+{costumerID=VINET, nOrders=5}
+{costumerID=WANDK, nOrders=10}
+{costumerID=WARTH, nOrders=15}
+{costumerID=WELLI, nOrders=9}
+{costumerID=WHITC, nOrders=14}
+{costumerID=WILMK, nOrders=7}
+{costumerID=WOLZA, nOrders=7}
+
+
+// Get the country that a specific costumer (costumerID = "SAVEA") ordered most from
+# 5
+
+Query 5:
+{customerID=SAVEA, country=USA, n_times=13}
+
+
+// Get all the suppliers that have a homepage
+# 6
+
+Query 6:
+{supplierID=7, contactName= Ltd., homePage=(03) 444-6588}
+{supplierID=14, contactName=Elio Rossi, homePage=(0544) 60603}
+{supplierID=18, contactName=Guylène Nodier, homePage=(1) 03.83.00.62}
+{supplierID=24, contactName= Mate, homePage=(02) 555-4873}
+{supplierID=26, contactName=Giovanni Giudici, homePage=(089) 6547667}
+{supplierID=28, contactName=Eliane Noz, homePage=38.76.98.58}
+
+
+// Get a product category (productID = 1)
+# 7
+
+Query 7:
+{productID=1, categoryID=1, categoryName=Beverages, description=Soft drinks, coffees, teas, beers, and ales}
+
+
+// Get all products that contain a specific word (word = "Chef")
+#8
+
+Query 8:
+{p.productID=4, p.productName=Chef Anton's Cajun Seasoning}
+{p.productID=5, p.productName=Chef Anton's Gumbo Mix}
+
+
+// Get the total price of an order (orderID = 10979)
+# 9
+
+Query 9:
+{orderID=10979, totalPrice=4703}
+
+
+// Get number of costumers per country
+# 10
+
+Query 10:
+{country=Germany, nCostumers=11}
+{country=Mexico, nCostumers=5}
+{country=UK, nCostumers=7}
+{country=Sweden, nCostumers=2}
+{country=France, nCostumers=11}
+{country=Spain, nCostumers=5}
+{country=Canada, nCostumers=3}
+{country=Argentina, nCostumers=3}
+{country=Switzerland, nCostumers=2}
+{country=Brazil, nCostumers=9}
+{country=Austria, nCostumers=2}
+{country=Italy, nCostumers=3}
+{country=Portugal, nCostumers=2}
+{country=USA, nCostumers=13}
+{country=Venezuela, nCostumers=4}
+{country=Ireland, nCostumers=1}
+{country=Belgium, nCostumers=2}
+{country=Norway, nCostumers=1}
+{country=Denmark, nCostumers=2}
+{country=Finland, nCostumers=2}
+{country=Poland, nCostumers=1}

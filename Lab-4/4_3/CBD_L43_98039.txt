@@ -1,0 +1,52 @@
+// a) Entities and relationships
+// User (svn_id TEXT, organization TEXT, num NUM, real_name TEXT)
+// Project (project_name TEXT)
+/ User-[role_on_project]->Project
+
+
+// b) Import data
+
+load csv with headers FROM 'file:///git_selection.csv' AS row
+merge (u:User {svn_id: row.svn_id, organization: row.organization, num: toInteger(row.num), real_name: row.real_name})
+merge (p:Project {project_name: row.project_name})
+merge (u)-[:WORKED_IN {role_on_project: row.role_on_project}]->(p)
+
+// Delete NA roles
+match (u:User)-[r:WORKED_IN {role_on_project: "NA"}]-(p:Project) delete r
+
+
+// c) Cypher queries
+
+# 1
+match (u:User) return u 
+// OR
+match (u:User) return u.svn_id as svn_id, u.num as num, u.organization as organization, u.real_name as real_name
+
+#2
+match (u:User) return distinct u.real_name as name
+
+#3
+match ()-[:WORKED_IN]->(p:Project) return distinct p
+
+#4
+match (u:User)-[r:WORKED_IN]-() with u.real_name as user, count(r) as n_colab return user, n_colab
+
+#5
+match (u:User)-[r:WORKED_IN]-() with u.real_name as user, count(r) as n_colab return user, n_colab order by n_colab desc
+
+#6
+// Without including members who don't have roles
+match (p:Project)-[r:WORKED_IN]-() with p.project_name as project, count(r) as n_colab return project, n_colab
+// Including members who don't have roles
+match (p:Project)-[:WORKED_IN]-(u:User) with p.project_name as project, count(u.real_name) as n_colab return project, n_colab
+
+#7
+match (p:Project)-[:WORKED_IN {role_on_project: "Committer"}]-(u:User) with p.project_name as project, count(u.real_name) as n_committers return project, n_committers
+
+#8
+match (u1:User {svn_id: "atm"})-[:WORKED_IN {role_on_project: "PMC"}]->(p:Project)<-[:WORKED_IN]-(u2:User) return distinct u1.real_name as atm_name, u2.real_name as user_name, p.project_name as project_name
+
+#9
+match (u1:User {svn_id: "atm"})-[:WORKED_IN {role_on_project: "PMC"}]-(p:Project)<-[:WORKED_IN {role_on_project: "Committer"}]-(u2:User) return distinct u1.real_name as atm_name, u2.real_name as user_name, p.project_name as project_name
+
+
