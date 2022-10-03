@@ -1,0 +1,184 @@
+mongoimport --db DB_NAME --collection COLLECTION_NAME --type=json --file=Name-of-file-to-import --jsonArray
+mongoimport --db cbd --collection people --file=generated.json --jsonArray
+
+---
+
+Generation of database:
+
+[
+  '{{repeat(100)}}',
+  {
+    _id: '{{objectId()}}',
+    index: '{{index()}}',
+    balance: '{{floating(1000, 4000, 2, "$0,0.00")}}',
+    age: '{{integer(20, 40)}}',
+    name: '{{firstName()}} {{surname()}}',
+    gender: '{{gender()}}',
+    company: '{{company().toUpperCase()}}',
+    email: '{{email()}}',
+    phone: '+351 {{phone()}}',
+    address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+    registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+    friends: [
+      '{{repeat(3)}}',
+      {
+        id: '{{index()}}',
+        name: '{{firstName()}} {{surname()}}',
+        email: '{{email()}}'
+      }
+    ]
+  }
+]
+
+---
+
+Example:
+
+{
+    "_id": "619aab20e3def571d11fb8cf",
+    "index": 0,
+    "balance": "$3,568.33",
+    "age": 36,
+    "name": "Mcneil Ayers",
+    "gender": "male",
+    "company": "EMPIRICA",
+    "email": "mcneilayers@empirica.com",
+    "phone": "+351 (898) 596-3873",
+    "address": "232 Fulton Street, Oceola, Missouri, 5369",
+    "registered": "2014-03-23T07:33:26 -00:00",
+    "friends": [
+        {
+        "id": 0,
+        "name": "Freda Parsons",
+        "email": "fredaparsons@empirica.com"
+        },
+        {
+        "id": 1,
+        "name": "Rebecca Mckee",
+        "email": "rebeccamckee@empirica.com"
+        },
+        {
+        "id": 2,
+        "name": "Tonia Porter",
+        "email": "toniaporter@empirica.com"
+        }
+    ]
+}
+
+
+---
+
+c)
+
+driver.findEqual("name", "Guy Flores");
+
+{"_id": "619aab21663fe2340b3c2faf", "index": 59, "balance": "$1,061.12", "age": 24, "name": "Guy Flores", "gender": "male", "company": "ECLIPTO", "email": "guyflores@eclipto.com", "phone": "+351 (945) 482-2040", "address": "551 Conklin Avenue, Heil, Massachusetts, 6121", "registered": "2016-10-27T08:27:57 -01:00", "friends": [{"id": 0, "name": "Prince Marsh", "email": "princemarsh@eclipto.com"}, {"id": 1, "name": "Hobbs Nieves", "email": "hobbsnieves@eclipto.com"}, {"id": 2, "name": "Luann Harvey", "email": "luannharvey@eclipto.com"}]}
+
+
+driver.findAllEqual("gender", "male");
+
+{"_id": "619aab209cd55580e6ddef8f", "index": 3, "balance": "$1,656.31", "age": 29, "name": "Hayes Webster", "gender": "male", "company": "CENTURIA", "email": "hayeswebster@centuria.com", "phone": "+351 (977) 411-2159", "address": "676 Guernsey Street, Topanga, Georgia, 7858", "registered": "2016-02-18T04:56:14 -00:00", "friends": [{"id": 0, "name": "Farmer Mayer", "email": "farmermayer@centuria.com"}, {"id": 1, "name": "Marietta Walsh", "email": "mariettawalsh@centuria.com"}, {"id": 2, "name": "Joanne Campos", "email": "joannecampos@centuria.com"}]}
+{"_id": "619aab20e3def571d11fb8cf", "index": 0, "balance": "$3,568.33", "age": 36, "name": "Mcneil Ayers", "gender": "male", "company": "EMPIRICA", "email": "mcneilayers@empirica.com", "phone": "+351 (898) 596-3873", "address": "232 Fulton Street, Oceola, Missouri, 5369", "registered": "2014-03-23T07:33:26 -00:00", "friends": [{"id": 0, "name": "Freda Parsons", "email": "fredaparsons@empirica.com"}, {"id": 1, "name": "Rebecca Mckee", "email": "rebeccamckee@empirica.com"}, {"id": 2, "name": "Tonia Porter", "email": "toniaporter@empirica.com"}]}
+{"_id": "619aab20e2b39592ffeff416", "index": 5, "balance": "$1,310.32", "age": 34, "name": "Grimes Ward", "gender": "male", "company": "WEBIOTIC", "email": "grimesward@webiotic.com", "phone": "+351 (961) 540-2228", "address": "592 Tennis Court, Stewart, Arizona, 5444", "registered": "2020-04-04T09:56:35 -01:00", "friends": [{"id": 0, "name": "Sharron Rocha", "email": "sharronrocha@webiotic.com"}, {"id": 1, "name": "Wilkinson Parrish", "email": "wilkinsonparrish@webiotic.com"}, {"id": 2, "name": "Howard Johnston", "email": "howardjohnston@webiotic.com"}]}
+{"_id": "619aab20e3138a7f286afa25", "index": 1, "balance": "$3,166.35", "age": 20, "name": "Morrow Clements", "gender": "male", "company": "QUALITERN", "email": "morrowclements@qualitern.com", "phone": "+351 (803) 544-3679", "address": "151 Aitken Place, Blackgum, Massachusetts, 6608", "registered": "2018-12-12T02:11:23 -00:00", "friends": [{"id": 0, "name": "Boyer Holder", "email": "boyerholder@qualitern.com"}, {"id": 1, "name": "Jones Gallagher", "email": "jonesgallagher@qualitern.com"}, {"id": 2, "name": "Hester Heath", "email": "hesterheath@qualitern.com"}]}
+{"_id": "619aab20b80f21c8014befd4", "index": 11, "balance": "$3,399.01", "age": 31, "name": "Hewitt Roberts", "gender": "male", "company": "ZAJ", "email": "hewittroberts@zaj.com", "phone": "+351 (860) 560-2558", "address": "164 Tilden Avenue, Osmond, Florida, 7199", "registered": "2014-06-10T04:06:35 -01:00", "friends": [{"id": 0, "name": "Leach Hickman", "email": "leachhickman@zaj.com"}, {"id": 1, "name": "Daphne Whitney", "email": "daphnewhitney@zaj.com"}, {"id": 2, "name": "Felicia Carrillo", "email": "feliciacarrillo@zaj.com"}]}
+{"_id": "619aab203a694be426b92b66", "index": 12, "balance": "$3,867.32", "age": 37, "name": "Edwards Goodwin", "gender": "male", "company": "PULZE", "email": "edwardsgoodwin@pulze.com", "phone": "+351 (907) 590-2246", "address": "211 Mermaid Avenue, Avoca, Virginia, 7161", "registered": "2021-06-30T01:30:04 -01:00", "friends": [{"id": 0, "name": "Garner Brewer", "email": "garnerbrewer@pulze.com"}, {"id": 1, "name": "Joyce Bond", "email": "joycebond@pulze.com"}, {"id": 2, "name": "Margo Logan", "email": "margologan@pulze.com"}]}
+{"_id": "619aab20453004a1acaf8cfd", "index": 14, "balance": "$2,481.36", "age": 26, "name": "Knight Vinson", "gender": "male", "company": "EMTRAK", "email": "knightvinson@emtrak.com", "phone": "+351 (842) 463-2259", "address": "630 Carlton Avenue, Gordon, Palau, 8905", "registered": "2015-02-13T03:47:02 -00:00", "friends": [{"id": 0, "name": "Morrison Mcdowell", "email": "morrisonmcdowell@emtrak.com"}, {"id": 1, "name": "Tracie Reyes", "email": "traciereyes@emtrak.com"}, {"id": 2, "name": "Berg Orr", "email": "bergorr@emtrak.com"}]}
+{"_id": "619aab20a9038974cb790dd7", "index": 4, "balance": "$1,120.35", "age": 25, "name": "Macdonald Burgess", "gender": "male", "company": "CUJO", "email": "macdonaldburgess@cujo.com", "phone": "+351 (945) 490-2005", "address": "264 Ralph Avenue, Lisco, North Carolina, 8933", "registered": "2021-05-16T01:59:51 -01:00", "friends": [{"id": 0, "name": "Goff George", "email": "goffgeorge@cujo.com"}, {"id": 1, "name": "Rice Garcia", "email": "ricegarcia@cujo.com"}, {"id": 2, "name": "Stephenson Hopkins", "email": "stephensonhopkins@cujo.com"}]}
+{"_id": "619aab21c3e88f508af83442", "index": 17, "balance": "$3,761.28", "age": 36, "name": "Marshall Peterson", "gender": "male", "company": "MEDICROIX", "email": "marshallpeterson@medicroix.com", "phone": "+351 (975) 486-3139", "address": "412 Exeter Street, Chilton, Northern Mariana Islands, 2480", "registered": "2018-03-05T10:10:54 -00:00", "friends": [{"id": 0, "name": "Rene Weiss", "email": "reneweiss@medicroix.com"}, {"id": 1, "name": "Fischer Shaffer", "email": "fischershaffer@medicroix.com"}, {"id": 2, "name": "Willis Solomon", "email": "willissolomon@medicroix.com"}]}
+
+
+driver.hasFriend("Blanca Duran");
+
+{"index": 86, "name": "Boyle Little", "friends": [{"id": 0, "name": "Jillian Houston", "email": "jillianhouston@artworlds.com"}, {"id": 1, "name": "Lottie English", "email": "lottieenglish@artworlds.com"}, {"id": 2, "name": "Blanca Duran", "email": "blancaduran@artworlds.com"}]}
+
+
+driver.balanceLessThan(1400);
+
+{"index": 5, "balance": "$1,310.32", "name": "Grimes Ward"}
+{"index": 4, "balance": "$1,120.35", "name": "Macdonald Burgess"}
+{"index": 23, "balance": "$1,063.15", "name": "Nixon Golden"}
+{"index": 22, "balance": "$1,333.38", "name": "Nunez Smith"}
+{"index": 19, "balance": "$1,123.04", "name": "Jerry Davis"}
+{"index": 18, "balance": "$1,290.19", "name": "Aline Fitzpatrick"}
+{"index": 36, "balance": "$1,165.29", "name": "Buchanan Mills"}
+{"index": 38, "balance": "$1,083.84", "name": "Lenora Burnett"}
+{"index": 46, "balance": "$1,086.05", "name": "Beverley Flowers"}
+{"index": 53, "balance": "$1,048.96", "name": "Wilson Brown"}
+{"index": 59, "balance": "$1,061.12", "name": "Guy Flores"}
+{"index": 61, "balance": "$1,296.17", "name": "Marjorie Carlson"}
+{"index": 67, "balance": "$1,095.93", "name": "Baxter Pruitt"}
+{"index": 77, "balance": "$1,008.71", "name": "Deleon James"}
+{"index": 90, "balance": "$1,197.78", "name": "Wendy Green"}
+{"index": 92, "balance": "$1,389.65", "name": "Rosales Cross"}
+{"index": 96, "balance": "$1,177.01", "name": "Carmen Washington"}
+{"index": 98, "balance": "$1,075.01", "name": "Mccarthy Leon"}
+
+
+driver.balanceGreaterThan(3600);
+
+{"index": 12, "balance": "$3,867.32", "name": "Edwards Goodwin"}
+{"index": 17, "balance": "$3,761.28", "name": "Marshall Peterson"}
+{"index": 7, "balance": "$3,737.91", "name": "Lakeisha Gordon"}
+{"index": 39, "balance": "$3,862.31", "name": "Minnie Armstrong"}
+{"index": 44, "balance": "$3,654.91", "name": "Mendoza Norman"}
+{"index": 51, "balance": "$3,998.97", "name": "Alford White"}
+{"index": 55, "balance": "$3,959.21", "name": "Tyler Greer"}
+{"index": 57, "balance": "$3,612.95", "name": "Vincent Moss"}
+{"index": 60, "balance": "$3,780.37", "name": "Kristin Grimes"}
+{"index": 62, "balance": "$3,846.53", "name": "Alexis Gillespie"}
+{"index": 63, "balance": "$3,851.16", "name": "Baldwin Daniel"}
+{"index": 65, "balance": "$3,957.49", "name": "Lori Romero"}
+{"index": 70, "balance": "$3,609.29", "name": "Jeanne Burke"}
+{"index": 73, "balance": "$3,784.38", "name": "Angelita Mendoza"}
+{"index": 71, "balance": "$3,990.18", "name": "Dionne Kramer"}
+{"index": 91, "balance": "$3,742.89", "name": "Corina Bird"}
+{"index": 78, "balance": "$3,942.16", "name": "Patsy Reid"}
+
+
+driver.phoneWithAreaCode(926);
+
+{"index": 32, "name": "Meyers Fry", "phone": "+351 (926) 546-2695"}
+{"index": 83, "name": "Christa Henry", "phone": "+351 (926) 522-3973"}
+
+
+driver.companyStartsWith("APEX");
+
+{"index": 60, "name": "Kristin Grimes", "company": "APEX"}
+{"index": 64, "name": "Bray Rodgers", "company": "APEXTRI"}
+
+
+driver.oldestPerson();
+
+{"index": 21, "age": 40, "name": "Glenn Meyers"}
+
+
+---
+
+d)
+
+driver.averageAge();
+
+Average age: 31.22
+
+
+driver.numberOfMales();
+driver.numberOfFemales();
+
+Number of males: 53
+Number of females: 47
+
+
+driver.maxBalance();
+
+Max balance: $3,998.97
+
+
+driver.firstFriend("Guy Flores");
+
+Guy Flores's first friend: Document{{id=0, name=Prince Marsh, email=princemarsh@eclipto.com}}
+
+
+driver.smallestNameCompany();
+
+Smallest company name: 3 letters
