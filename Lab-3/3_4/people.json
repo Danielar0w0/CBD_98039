@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Ada Wise",
+    "email": "adawise@pharmex.com",
+    "age": 27,
+    "gender": "female"
+  },
+  {
+    "name": "Osborn Massey",
+    "email": "osbornmassey@pharmex.com",
+    "age": 35,
+    "gender": "male"
+  },
+  {
+    "name": "Alexander Camacho",
+    "email": "alexandercamacho@pharmex.com",
+    "age": 30,
+    "gender": "male"
+  },
+  {
+    "name": "Lewis French",
+    "email": "lewisfrench@pharmex.com",
+    "age": 33,
+    "gender": "male"
+  },
+  {
+    "name": "Harvey Mitchell",
+    "email": "harveymitchell@pharmex.com",
+    "age": 30,
+    "gender": "male"
+  },
+  {
+    "name": "Isabel Livingston",
+    "email": "isabellivingston@pharmex.com",
+    "age": 36,
+    "gender": "female"
+  },
+  {
+    "name": "Karen Warner",
+    "email": "karenwarner@pharmex.com",
+    "age": 33,
+    "gender": "female"
+  },
+  {
+    "name": "Francis Fields",
+    "email": "francisfields@pharmex.com",
+    "age": 28,
+    "gender": "female"
+  },
+  {
+    "name": "Austin Bradley",
+    "email": "austinbradley@pharmex.com",
+    "age": 22,
+    "gender": "male"
+  },
+  {
+    "name": "Pennington Waller",
+    "email": "penningtonwaller@pharmex.com",
+    "age": 39,
+    "gender": "male"
+  },
+  {
+    "name": "Cassandra Pollard",
+    "email": "cassandrapollard@pharmex.com",
+    "age": 30,
+    "gender": "female"
+  },
+  {
+    "name": "Katelyn David",
+    "email": "katelyndavid@pharmex.com",
+    "age": 31,
+    "gender": "female"
+  },
+  {
+    "name": "Joyce Carey",
+    "email": "joycecarey@pharmex.com",
+    "age": 35,
+    "gender": "male"
+  },
+  {
+    "name": "Lucille Brennan",
+    "email": "lucillebrennan@pharmex.com",
+    "age": 25,
+    "gender": "female"
+  },
+  {
+    "name": "Marcia Jacobs",
+    "email": "marciajacobs@pharmex.com",
+    "age": 25,
+    "gender": "female"
+  }
+]

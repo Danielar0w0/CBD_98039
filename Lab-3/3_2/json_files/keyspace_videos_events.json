@@ -1,0 +1,72 @@
+[
+  {
+    "user_email": "bern@ua.pt",
+    "video_name": "Video Today",
+    "stamp": "2021-12-06 20:24:38.161",
+    "action": "stop",
+    "video_time": 300
+  },
+  {
+    "user_email": "leo.go@ua.pt",
+    "video_name": "Video 2",
+    "stamp": "2021-12-06 20:24:38.240",
+    "action": "play",
+    "video_time": 20
+  },
+  {
+    "user_email": "ddias@ua.pt",
+    "video_name": "Video 1",
+    "stamp": "2021-12-06 20:24:38.110",
+    "action": "play",
+    "video_time": 30
+  },
+  {
+    "user_email": "rosas@ua.pt",
+    "video_name": "DIY House",
+    "stamp": "2021-12-06 20:24:38.177",
+    "action": "play",
+    "video_time": 0
+  },
+  {
+    "user_email": "leo.go@ua.pt",
+    "video_name": "Video 2",
+    "stamp": "2021-12-06 20:25:36.599",
+    "action": "stop",
+    "video_time": 400
+  },
+  {
+    "user_email": "ddias@ua.pt",
+    "video_name": "Video 1",
+    "stamp": "2021-12-06 20:24:38.136",
+    "action": "pause",
+    "video_time": 50
+  },
+  {
+    "user_email": "rosas@ua.pt",
+    "video_name": "DIY House",
+    "stamp": "2021-12-06 20:24:38.208",
+    "action": "stop",
+    "video_time": 250
+  },
+  {
+    "user_email": "j.ana@ua.pt",
+    "video_name": "Gardening",
+    "stamp": "2021-12-06 20:24:38.224",
+    "action": "play",
+    "video_time": 100
+  },
+  {
+    "user_email": "rosas@ua.pt",
+    "video_name": "DIY House",
+    "stamp": "2021-12-06 20:24:38.192",
+    "action": "stop",
+    "video_time": 20
+  },
+  {
+    "user_email": "bern@ua.pt",
+    "video_name": "Video Today",
+    "stamp": "2021-12-06 20:24:38.146",
+    "action": "play",
+    "video_time": 30
+  }
+]

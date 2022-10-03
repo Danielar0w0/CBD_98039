@@ -1,0 +1,52 @@
+[
+  {
+    "video_name": "Video 2",
+    "user_email": "j.ana@ua.pt",
+    "rating": 3
+  },
+  {
+    "video_name": "Video 2",
+    "user_email": "leo.go@ua.pt",
+    "rating": 2
+  },
+  {
+    "video_name": "Moving to a new house!",
+    "user_email": "dnoites@ua.pt",
+    "rating": 4
+  },
+  {
+    "video_name": "Moving to a new house!",
+    "user_email": "fdani@ua.pt",
+    "rating": 5
+  },
+  {
+    "video_name": "Video 1",
+    "user_email": "rosas@ua.pt",
+    "rating": 1
+  },
+  {
+    "video_name": "Video Today",
+    "user_email": "ddias@ua.pt",
+    "rating": 4
+  },
+  {
+    "video_name": "Video Today",
+    "user_email": "dnoites@ua.pt",
+    "rating": 1
+  },
+  {
+    "video_name": "Video Today",
+    "user_email": "rosas@ua.pt",
+    "rating": 2
+  },
+  {
+    "video_name": "DIY House",
+    "user_email": "ddias@ua.pt",
+    "rating": 5
+  },
+  {
+    "video_name": "Gardening",
+    "user_email": "bern@ua.pt",
+    "rating": 5
+  }
+]

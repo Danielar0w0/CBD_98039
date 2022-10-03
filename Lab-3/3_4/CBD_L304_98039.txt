@@ -1,0 +1,12 @@
+(Generate people.json)
+
+[
+  '{{repeat(15)}}',
+  {
+    name: '{{firstName()}} {{surname()}}',
+    email: '{{email()}}',
+    age: '{{integer(20, 40)}}',
+    gender: '{{gender()}}',
+  }
+]
+

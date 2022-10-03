@@ -1,0 +1,86 @@
+[
+  {
+    "author_email": "leo.go@ua.pt",
+    "video_name": "DIY House",
+    "description": "My DIY video!",
+    "stamp": "2021-12-06 20:15:52.897",
+    "tag": ["DIY", "House"]
+  },
+  {
+    "author_email": "gabyss@ua.pt",
+    "video_name": "Videoooo",
+    "description": "My second video!",
+    "stamp": "2021-12-06 20:15:53.019",
+    "tag": ["Random", "Aveiro"]
+  },
+  {
+    "author_email": "gabyss@ua.pt",
+    "video_name": "Hello everyone",
+    "description": "My first video!",
+    "stamp": "2021-12-06 20:15:53.004",
+    "tag": ["Hello", "First"]
+  },
+  {
+    "author_email": "ddias@ua.pt",
+    "video_name": "Video 2",
+    "description": "My second video!",
+    "stamp": "2021-12-06 20:15:52.866",
+    "tag": ["Random", "Attempt"]
+  },
+  {
+    "author_email": "ddias@ua.pt",
+    "video_name": "Video 1",
+    "description": "My first video!",
+    "stamp": "2021-12-06 20:15:52.837",
+    "tag": ["Random", "Attempt"]
+  },
+  {
+    "author_email": "ddias@ua.pt",
+    "video_name": "Travelling to Japan",
+    "description": "New adventures.",
+    "stamp": "2021-12-06 20:15:52.943",
+    "tag": ["Japan", "Travel"]
+  },
+  {
+    "author_email": "j.ana@ua.pt",
+    "video_name": "Gardening",
+    "description": "Gardening for life!",
+    "stamp": "2021-12-06 20:15:52.912",
+    "tag": ["Gardening", "Flowers"]
+  },
+  {
+    "author_email": "bern@ua.pt",
+    "video_name": "Random title!",
+    "description": "Just experimenting!",
+    "stamp": "2021-12-06 20:15:52.881",
+    "tag": ["Random", "Experiment"]
+  },
+  {
+    "author_email": "dnoites@ua.pt",
+    "video_name": "Deleting my Account",
+    "description": "Bye bye",
+    "stamp": "2021-12-06 20:15:52.989",
+    "tag": ["Goodbye"]
+  },
+  {
+    "author_email": "rosas@ua.pt",
+    "video_name": "XPTO",
+    "description": "I dont know.",
+    "stamp": "2021-12-06 20:15:52.958",
+    "tag": ["Random", "Attempt"]
+  },
+  {
+    "author_email": "rosas@ua.pt",
+    "video_name": "Video Today",
+    "description": "Subscribe!",
+    "stamp": "2021-12-06 20:15:52.973",
+    "tag": ["Daily", "Vlog"]
+  },
+  {
+    "author_email": "fdani@ua.pt",
+    "video_name": "Moving to a new house!",
+    "description": "Lets go!",
+    "stamp": "2021-12-06 20:15:52.927",
+    "tag": ["New House", "Moving"]
+  }
+]
